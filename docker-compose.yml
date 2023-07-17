@@ -35,3 +35,11 @@ services:
     restart: unless-stopped
     networks:
       - loki
+ 
+  python_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./dummy_logs.py:/app/dummy_logs.py
+      - ./dummy.log:/app/dummy.log

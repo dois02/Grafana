@@ -41,5 +41,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ./dummy_logs.py:/app/dummy_logs.py
-      - ./dummy.log:/app/dummy.log
+      - C:\Users\VASU03\Documents\Grafana\Grafana\dummy_logs.py:/app/dummy_logs.py
+      - C:\Users\VASU03\Documents\Grafana\Grafana\promtail\dummy.log:/app/dummy.log
+    networks:
+      - loki
